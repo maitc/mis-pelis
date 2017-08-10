@@ -1,0 +1,26 @@
+/*INDEX*/
+.index{
+	background-color: $colorfondo;
+	height: 100vh;
+	.indextitulo{
+		font-family: 'Anton', sans-serif;
+		color: $blanco;
+		padding-top: 25%;
+		padding-bottom: 15%;
+	}
+	.botonindex{
+		width: 90%;
+		background-color: $blanco;
+		color: $colorfondo;
+		text-transform: capitalize;
+		font-family: 'Nunito', sans-serif;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	p{
+		color: $blanco;
+		font-family: 'Nunito', sans-serif;
+		font-weight: bold;
+	}
+}
+/*FIN INDEX*/
