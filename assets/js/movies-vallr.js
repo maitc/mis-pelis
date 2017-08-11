@@ -17,7 +17,11 @@ $(document).ready(function(){
 				$("#movie-area").append(`
 					<div class="col s12">
 						<div class="col s9">
+
+							<a href="details.html" class="name">`+ response.show_title +`<span class="year"> ` + response.release_year + ` | `+ response.category +`</span></a>
+
 							<p class="name">`+ response.show_title +`<span class="year"> ` + response.release_year + ` | `+ response.category +`</span></p>
+
 							<p class="rojo"><span><i class="icon material-icons">schedule</i></span> `+ response.release_year +` <span><i class="icon material-icons">tv</i></span> `+ response.director +`</p>
 						</div>
 						<div class="col s3">
