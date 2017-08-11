@@ -16,7 +16,7 @@ $(document).ready(function(){
 				console.log(response.director);
 			});
 			req.send(null);
-			$("#search").val("");			
+			$("#search").val(""); //la búsqueda por título no lleva filtro por catergoría, porque sólo lanza un sólo resultdo
 		}
 		else if(($("#parameter").val())==2){
 			var req = new XMLHttpRequest();
@@ -29,16 +29,28 @@ $(document).ready(function(){
 				console.log(response);
 				response.forEach(function(ele){
 					console.log(ele);
-					var titulo = ele.show_title;
-					var anio = ele.release_year;
-					var categoria = ele.category;
-					var duracion = ele.runtime;
+					var title = ele.show_title;
+					var year = ele.release_year;
+					var category = ele.category;
+					var duration = ele.runtime;
 					var director = ele.director;
+					$("#movie-area").append(`
+						<div class="`+ category +`">
+							<div class="row">
+								<p><b>`+ title +`</b> `+ year +`|`+ category +`</p>
+							</div>
+							<div class="row">
+								<p>+`+ duration +` `+ director +`</p>
+							</div>
+						</div>						
+
+					`)			
 				});	
 			});
 			req.send(null);
 			console.log($("#search").val())
 			$("#search").val("");
+			$("#category-field").removeClass("hide");
 		}
 		else if(($("#parameter").val())==3){			
 			var req = new XMLHttpRequest();
@@ -51,17 +63,37 @@ $(document).ready(function(){
 				console.log(response);
 				response.forEach(function(ele){
 					console.log(ele);
-					var titulo = ele.show_title;
-					var anio = ele.release_year;
-					var categoria = ele.category;
-					var duracion = ele.runtime;
+					var title = ele.show_title;
+					var year = ele.release_year;
+					var category = ele.category;
+					var duration = ele.runtime;
 					var director = ele.director;
+					$("#movie-area").append(`
+						<div class="movie `+ category +`">
+							<div class="row">
+								<p><b>`+ title +`</b> `+ year +`|`+ category +`</p>
+							</div>
+							<div class="row">
+								<p>+`+ duration +` `+ director +`</p>
+							</div>
+						</div>						
+
+					`)
 				});	
 			});
 			req.send(null);
-			console.log($("#search").val())
-			$("#search").val("");			
+			$("#category-field").removeClass("hide");
 		}
+	});
+
+	$("#category").change(function(){
+		var arr=[];
+		$(".movies").each(function(){
+			arr.push($(".movies"));
+		});
+		arr.forEach(function(){
+			console.log("no")
+		});
 	});
 
 });
