@@ -1,3 +1,4 @@
+
 /*MAI DETAILS*/
 .second-section, .third-section, .fourth-section, nav{
 	font-family: 'Nunito', sans-serif;
@@ -160,139 +161,50 @@ nav{
     position: relative;
     top: 2px;
 }
-=======
 *{
   font-family: $font;
 }
 nav{
-  height: 60px;
-  background-color: #333;
-  font-weight: lighter;
-}
-/*INDEX*/
-.index{
-	background-color: $colorfondo;
-	height: 100vh;
-	.indextitulo{
-		font-family: 'Anton', sans-serif;
-		color: $blanco;
-		padding-top: 25%;
-		padding-bottom: 15%;
-	}
-	.botonindex{
-		width: 90%;
-		background-color: $blanco;
-		color: $colorfondo;
-		text-transform: capitalize;
-		font-family: 'Nunito', sans-serif;
-		font-weight: bold;
-		margin-bottom: 10px;
-	}
-	p{
-		color: $blanco;
-		font-family: 'Nunito', sans-serif;
-		font-weight: bold;
+	background-color:$nav;
+	.brand-logo{
+		font-size:15px;
 	}
 }
-/*FIN INDEX*/
+.boton{
+	background-color:#C14748;
+	border-radius:3%;
+	font-size:10px;
+}
+.btn:hover{
+	background-color:#C14748;
+}
+.year{
+	color:#8E8E92;
+}
+.name{
+	color:black;
+	font-weight: 700;
+}
+.rojo{
+	font-size:13px;
+	color:#C14748;
+}
+.icon{
+	font-size:15px;
+}
 
-/*LOGIN*/
-.login{
-	background-color: $colorfondogris;
-	height: 100vh;
-	.nav-wrapper{
-		background-color: $colornav;
-	}
-	.errormail{
-		display: none;
-		color: $negro;
-	}
-	.errorpass{
-		display: none;
-		color: $negro;
-	}
-	.centro{
-		padding: 40px;
-		p{
-			color: $negro;
-			padding: 0px;
-		}
-		h6{
-			color: $negro;
-			a{
-				color:$negro;
-			}
-			a:hover{
-				color: darkblue;
-			}
-		}
-		.input{
-			height: 70px;
-			color: $negro;
-			margin-bottom: 30px;
-		}
-		label{
-			color: $colorletra;
-			font-weight: bold;
-			padding-bottom: 5px;
-			height: 30px;
-		}
-		input{
-			background-color: $blanco;
-			height: 30px;
-			border: none;
-			margin: 0;
-		}
-	}
-	#btn-sesion{
-		width: 100%;
-		background-color: $colornav;
-		color: $blanco;
-		margin-top: 50px;
-		text-transform: capitalize;
-	}
+#fav{
+	background-color:#C14748 ;
+    font-size: 8px;
+    line-height: 15px;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+    text-transform: none;
+    width: 104%;
+    height: 22px;
+    margin: 12px 0 0;
 }
-/*FIN LOGIN*/
-/*CUENTA*/
-.cuenta{
-	background-color: $colorfondogris;
-	height: 100vh;
-	.nav-wrapper{
-		background-color: $colornav;
-	}
-	.centro{
-		padding: 30px;
-		.input{
-			height: 70px;
-			color: $negro;
-		}
-		label{
-			color: $colorletra;
-			font-weight: bold;
-			padding-bottom: 5px;
-			height: 30px;
-		}
-		input{
-			background-color: $blanco;
-			height: 30px;
-			border: none;
-			margin: 0;
-		}
-		.botoncuenta{
-			width: 70%;
-			background-color: $colornav;
-			color: $blanco;
-			margin-top: 50px;
-			text-transform: capitalize;
-		}
-		.vacio{
-			display: none;
-			color: $negro;
-		}
-		.error{
-			display: none;
-			color: $negro;
-		}
-	}
+#rating{
+	color:#C14748;
 }
-/*FIN CUENTA*/
