@@ -20254,6 +20254,13 @@ if (jQuery) {
 })(jQuery);
 
 $(document).ready(function(){
+
+
+
+	$(".button-collapse").sideNav();
+	$('select').material_select();
+
+
 	var req = new XMLHttpRequest();
 
 	var URL = "https://netflixroulette.net/api/api.php?";
@@ -20278,6 +20285,7 @@ $(document).ready(function(){
 	  
 	});
 	req.send(null);
+
 })
 
 
@@ -20287,29 +20295,61 @@ $('#login').click(function(){
 })
 $('#cuenta').click(function(){
 	document.location.href = "cuenta.html";
-})
-/*FIN INDEX*/
 
-/*LOGIN*/
-$('#btn-sesion').click(function(){
-	/*PONER VALIDACION DE DATOS*/
-	var vali = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
-	var inputmail = $('#mail').val();
-	var clave = $('#pass').val();
-	if (vali.test(inputmail)==false){
-		$('.errormail').show();
-	}else{
-		$('.errormail').hide();
-	}
-	if(clave.length>8 || isNaN(clave)==true || clave==''){
-		$('.errorpass').show();
-	}else{
-		$('.errorpass').hide();
-	}
-	if(vali.test(inputmail)==true && inputmail!=='' && clave.length<8 && isNaN(clave)==false & clave!==''){
-		document.location.href= "movies.html";
-	}
+
+})
+
+
+/*MAI*/
+
+$(document).ready(function(){
+    $(".button-collapse").sideNav();
+
+
+    var req = new XMLHttpRequest();
+
+	var URL = "https://netflixroulette.net/api/api.php?";
+	var queryType = "title=";
+	var query = "pulp%20fiction";
+
+	req.open('GET', URL + queryType + query, true);
+	req.addEventListener("load", function() {
+		var response = JSON.parse(req.responseText);
+
+		//transormando en array cast.
+		var actores = response.show_cast;
+		var arr = actores.split(',');
+		arr.forEach(function(e, f){
+			var contador = f + 1;
+			$(".details-starring").append('<p class="details-actors" id="actor-' + contador + '">' + e + '</p>');
+		})
+		
+		//append de datos
+		var imgMovie = '<img src="' + response.poster + '" class="imagen-movie">';
+		var rating = '<p>Rating: ' + response.rating + '</p>';
+		var titleMovie = '<h6 id="title-movie">' + response.show_title  + '<span>' + response.category + '</span></h6>';
+		var summaryMovie = '<p>' + response.summary + '</p>';
+		var genresMovie = '<p>Genres: ' + response.category + '</p>';
+		var directorMovie = '<p>Director: ' + response.director + '</p>';
+
+	  	$(".img-movie").append(imgMovie);
+	  	$(".details-rating").append(rating);
+	  	$(".details-title").append(titleMovie);
+	  	$(".details-summary").append(summaryMovie);
+	  	$(".details-genres").append(genresMovie);
+	  	$(".details-director").append(directorMovie);
+
+
+	  	$(".details-actors").click(function(){
+	  		window.location.href = "actors.html";
+	  	})
+
+	  
+	});
+	req.send(null);
+
 });
+
 /*FIN LOGIN*/
 
 /*CUENTA*/
@@ -20396,6 +20436,32 @@ $(document).ready(function(){
 });
 
 
+
+    $(".button-collapse").sideNav();
+
+    $('#user').append(localStorage.getItem('username'));
+    $('#name').append(localStorage.getItem('name'));
+    $('#country').append(localStorage.getItem('country'));
+
+
+    $('.fav').each(function(i, elem){
+    		elem.click(function()){
+          $('favs').append(  `<div class="col s6">
+                                <img src="" alt="" class="responsive-img">
+                                <p class='text-red'>elem.title</p>
+
+                              </div>)`
+        }
+    	});
+    $('.fav')
+
+    $(".hide").click(function(){
+    $("p").hide();
+
+});
+
+
+
 $(document).ready(function(){
 
 	$("#parameter").change(function(){
@@ -20415,7 +20481,11 @@ $(document).ready(function(){
 				$("#movie-area").append(`
 					<div class="col s12">
 						<div class="col s9">
+
 							<a href="details.html" class="name">`+ response.show_title +`<span class="year"> ` + response.release_year + ` | `+ response.category +`</span></a>
+
+							<p class="name">`+ response.show_title +`<span class="year"> ` + response.release_year + ` | `+ response.category +`</span></p>
+
 							<p class="rojo"><span><i class="icon material-icons">schedule</i></span> `+ response.release_year +` <span><i class="icon material-icons">tv</i></span> `+ response.director +`</p>
 						</div>
 						<div class="col s3">
@@ -20508,6 +20578,7 @@ $(document).ready(function(){
 			}
 		}
 	})
+
 });
 $(document).ready(function(){
     $(".button-collapse").sideNav();
@@ -20529,3 +20600,6 @@ $(document).ready(function(){
     });*/
 
 });
+
+});
+

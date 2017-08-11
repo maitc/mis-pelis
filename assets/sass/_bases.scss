@@ -1,134 +1,174 @@
-/*INDEX*/
-.index{
-	background-color: $colorfondo;
-	height: 100vh;
-	.indextitulo{
-		font-family: 'Anton', sans-serif;
-		color: $blanco;
-		padding-top: 25%;
-		padding-bottom: 15%;
+
+/*MAI DETAILS*/
+.second-section, .third-section, .fourth-section, nav{
+	font-family: 'Nunito', sans-serif;
+}
+nav{
+	background-color: black;
+	.brand-logo{
+		font-size: 15px;
 	}
-	.botonindex{
-		width: 90%;
-		background-color: $blanco;
-		color: $colorfondo;
-		text-transform: capitalize;
-		font-family: 'Nunito', sans-serif;
-		font-weight: bold;
-		margin-bottom: 10px;
+}
+
+.first-section{
+	div{
+		margin: 0px;
+	}
+}
+.second-section{
+	background-color: #C14748;
+	div{
+		div{
+			div{
+				color: white;
+				font-weight: 300;
+				h5{
+					display: inline-block;
+					position: relative;
+   					top: 22px;
+				}
+				i{
+					
+				}
+			}
+		}
+	}
+}
+.icon-watch{
+	display: inline-block;
+	position: relative;
+	top: 28px;
+}
+.third-section{
+	div{
+		div{
+			div{
+				p{
+					background-color: #C14748;
+					display: inline-block;
+					padding: 3px;
+					color: white;
+					border-radius: 5px;
+				}
+			}
+			div{
+				#details-add-favorites{
+					padding: 3px;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}
+.fourth-section{
+	div{
+		div{
+			div{
+				h6{
+					display: inline-block;
+					margin-bottom: 0px;
+				}
+			}
+		}
+		div{
+			div{
+				p{
+					color: #8E8E92;
+				}
+			}
+		}
+	}
+}
+#details-starring{
+	color: #C14748;
+}
+
+/*DETALLES SECCION MAI*/
+.imagen-movie{
+	width: 111%;
+	height: 420px;
+}
+.details-dos{
+	position: relative;
+    top: -51px;
+}
+.details-dos-row{
+	margin: 0px;
+}
+#details-play{
+	display: inline-block;
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: -39px;
+    bottom: -16px;
+    -webkit-box-shadow: 7px 7px 35px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 7px 35px -9px rgba(0,0,0,0.75);
+	box-shadow: 7px 7px 35px -9px rgba(0,0,0,0.75);
+}
+.icon-play{
+    color: #C14748;
+    font-size: 45px;
+    position: relative;
+    top: 3px;
+}
+#title-movie{
+	font-size: 15px;
+	color: black;
+	font-weight: 700;
+	span{
+		margin-left: 2px;
+		color: #CCCCD3;
+		font-style: italic;
+		font-weight: 400;
+	}
+}
+.details-genres p, .details-director p{
+	margin: 5px 0;
+}
+.details-starring{
+	color: #C14748;
+	h6{
+		font-weight: 700;
+	}
+	.details-actors{
+		margin: 1px 0 0 5px;
+		color: #C14748;
+		font-weight: 400;
+	}
+}
+
+/*MAI ACTOR*/
+.first-section-actor{
+	background-color: #C14748;
+	height: 300px;
+}
+.actor-name{
+	color: white;
+	text-align: center;
+	h4{
+		margin-top: 118px;
 	}
 	p{
-		color: $blanco;
-		font-family: 'Nunito', sans-serif;
-		font-weight: bold;
+		margin: 2px 0;
+		display: inline-block;
 	}
 }
-/*FIN INDEX*/
 
-/*LOGIN*/
-.login{
-	background-color: $colorfondogris;
-	height: 100vh;
-	.nav-wrapper{
-		background-color: $colornav;
-	}
-	.errormail{
-		display: none;
-		color: $negro;
-	}
-	.errorpass{
-		display: none;
-		color: $negro;
-	}
-	.centro{
-		padding: 40px;
-		p{
-			color: $negro;
-			padding: 0px;
-		}
-		h6{
-			color: $negro;
-			a{
-				color:$negro;
-			}
-			a:hover{
-				color: darkblue;
-			}
-		}
-		.input{
-			height: 70px;
-			color: $negro;
-			margin-bottom: 30px;
-		}
-		label{
-			color: $colorletra;
-			font-weight: bold;
-			padding-bottom: 5px;
-			height: 30px;
-		}
-		input{
-			background-color: $blanco;
-			height: 30px;
-			border: none;
-			margin: 0;
-		}
-	}
-	#btn-sesion{
-		width: 100%;
-		background-color: $colornav;
-		color: $blanco;
-		margin-top: 50px;
-		text-transform: capitalize;
-	}
-}
-/*FIN LOGIN*/
-/*CUENTA*/
-.cuenta{
-	background-color: $colorfondogris;
-	height: 100vh;
-	.nav-wrapper{
-		background-color: $colornav;
-	}
-	.centro{
-		padding: 30px;
-		.input{
-			height: 70px;
-			color: $negro;
-		}
-		label{
-			color: $colorletra;
-			font-weight: bold;
-			padding-bottom: 5px;
-			height: 30px;
-		}
-		input{
-			background-color: $blanco;
-			height: 30px;
-			border: none;
-			margin: 0;
-		}
-		.botoncuenta{
-			width: 70%;
-			background-color: $colornav;
-			color: $blanco;
-			margin-top: 50px;
-			text-transform: capitalize;
-		}
-		.vacio{
-			display: none;
-			color: $negro;
-		}
-		.error{
-			display: none;
-			color: $negro;
-		}
-	}
-}
 /*FIN CUENTA*/
+
+.icon-movie{
+	font-size: 16px;
+	margin-right: 2px;
+    position: relative;
+    top: 2px;
+}
+
 *{
   font-family: $font;
 }
-nav{
+
   height: 60px;
   background-color: #333;
   font-weight: lighter;
@@ -297,6 +337,13 @@ nav{
     top: 2px;
 }
 
+
+	background-color:$nav;
+	.brand-logo{
+		font-size:15px;
+	}
+}
+
 .boton{
 	background-color:#C14748;
 	border-radius:3%;
@@ -334,4 +381,8 @@ nav{
 }
 #rating{
 	color:#C14748;
+
 }
+
+}
+
