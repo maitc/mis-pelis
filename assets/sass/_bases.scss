@@ -1,3 +1,169 @@
+
+/*MAI DETAILS*/
+.second-section, .third-section, .fourth-section, nav{
+	font-family: 'Nunito', sans-serif;
+}
+nav{
+	background-color: black;
+	.brand-logo{
+		font-size: 15px;
+	}
+}
+
+.first-section{
+	div{
+		margin: 0px;
+	}
+}
+.second-section{
+	background-color: #C14748;
+	div{
+		div{
+			div{
+				color: white;
+				font-weight: 300;
+				h5{
+					display: inline-block;
+					position: relative;
+   					top: 22px;
+				}
+				i{
+					
+				}
+			}
+		}
+	}
+}
+.icon-watch{
+	display: inline-block;
+	position: relative;
+	top: 28px;
+}
+.third-section{
+	div{
+		div{
+			div{
+				p{
+					background-color: #C14748;
+					display: inline-block;
+					padding: 3px;
+					color: white;
+					border-radius: 5px;
+				}
+			}
+			div{
+				#details-add-favorites{
+					padding: 3px;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}
+.fourth-section{
+	div{
+		div{
+			div{
+				h6{
+					display: inline-block;
+					margin-bottom: 0px;
+				}
+			}
+		}
+		div{
+			div{
+				p{
+					color: #8E8E92;
+				}
+			}
+		}
+	}
+}
+#details-starring{
+	color: #C14748;
+}
+
+/*DETALLES SECCION MAI*/
+.imagen-movie{
+	width: 111%;
+	height: 420px;
+}
+.details-dos{
+	position: relative;
+    top: -51px;
+}
+.details-dos-row{
+	margin: 0px;
+}
+#details-play{
+	display: inline-block;
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: -39px;
+    bottom: -16px;
+    -webkit-box-shadow: 7px 7px 35px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 7px 35px -9px rgba(0,0,0,0.75);
+	box-shadow: 7px 7px 35px -9px rgba(0,0,0,0.75);
+}
+.icon-play{
+    color: #C14748;
+    font-size: 45px;
+    position: relative;
+    top: 3px;
+}
+#title-movie{
+	font-size: 15px;
+	color: black;
+	font-weight: 700;
+	span{
+		margin-left: 2px;
+		color: #CCCCD3;
+		font-style: italic;
+		font-weight: 400;
+	}
+}
+.details-genres p, .details-director p{
+	margin: 5px 0;
+}
+.details-starring{
+	color: #C14748;
+	h6{
+		font-weight: 700;
+	}
+	.details-actors{
+		margin: 1px 0 0 5px;
+		color: #C14748;
+		font-weight: 400;
+	}
+}
+
+/*MAI ACTOR*/
+.first-section-actor{
+	background-color: #C14748;
+	height: 300px;
+}
+.actor-name{
+	color: white;
+	text-align: center;
+	h4{
+		margin-top: 118px;
+	}
+	p{
+		margin: 2px 0;
+		display: inline-block;
+	}
+}
+.icon-movie{
+	font-size: 16px;
+	margin-right: 2px;
+    position: relative;
+    top: 2px;
+}
+*{
+  font-family: $font;
+}
 nav{
 	background-color:$nav;
 	.brand-logo{
