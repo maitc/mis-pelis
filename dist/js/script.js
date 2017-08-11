@@ -20256,5 +20256,26 @@ if (jQuery) {
 $(document).ready(function(){
     $(".button-collapse").sideNav();
 
-    
+    $('#user').append(localStorage.getItem('username'));
+    $('#name').append(localStorage.getItem('name'));
+    $('#country').append(localStorage.getItem('country'));
+
+
+    $('.fav').each(function(i, elem){
+    		elem.click(function()){
+          $('favs').append(  `<div class="col s6">
+                                <img src="" alt="" class="responsive-img">
+                                <p class='text-red'>elem.title</p>
+
+                              </div>)`
+        }
+    	});
+    $('.fav')
+
+    $(".hide").click(function(){
+    $("p").hide();
+});
+
+
+
 });
