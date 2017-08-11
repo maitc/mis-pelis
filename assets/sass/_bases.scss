@@ -1,3 +1,11 @@
+*{
+  font-family: $font;
+}
+nav{
+  height: 60px;
+  background-color: #333;
+  font-weight: lighter;
+}
 /*INDEX*/
 .index{
 	background-color: $colorfondo;
