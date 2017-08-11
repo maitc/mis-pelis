@@ -87,13 +87,12 @@ $(document).ready(function(){
 	});
 
 	$("#category").change(function(){
-		var arr=[];
-		$(".movies").each(function(){
-			arr.push($(".movies"));
-		});
-		arr.forEach(function(){
-			console.log("no")
-		});
-	});
-
+		function filter(){
+			for(var i=0; i<($(".movie")).length; i++){
+				if((($(".movie"))[i]).hasClass($("#category").val())){
+					console.log("it works kinda")
+				}
+			}
+		}
+	})
 });
