@@ -20257,6 +20257,8 @@ $(document).ready(function(){
 	$(".button-collapse").sideNav();
 	$('select').material_select();
 });
+
+
 $(document).ready(function(){
 
 	$("#parameter").change(function(){
@@ -20273,9 +20275,20 @@ $(document).ready(function(){
 				console.log(response.category);
 				console.log(response.runtime);
 				console.log(response.director);
+				$("#movie-area").append(`
+					<div class="col s12">
+						<div class="col s9">
+							<p class="name">`+ response.show_title +`<span class="year"> ` + response.release_year + ` | `+ response.category +`</span></p>
+							<p class="rojo"><span><i class="icon material-icons">schedule</i></span> `+ response.release_year +` <span><i class="icon material-icons">tv</i></span> `+ response.director +`</p>
+						</div>
+						<div class="col s3">
+							<a id="fav" class="btn btn-small">Add Favorites</a>
+						</div>
+					</div>
+					`)				
 			});
 			req.send(null);
-			$("#search").val(""); //la búsqueda por título no lleva filtro por catergoría, porque sólo lanza un sólo resultdo
+			//la búsqueda por título no lleva filtro por catergoría, porque sólo lanza un sólo resultdo
 		}
 		else if(($("#parameter").val())==2){
 			var req = new XMLHttpRequest();
@@ -20294,14 +20307,15 @@ $(document).ready(function(){
 					var duration = ele.runtime;
 					var director = ele.director;
 					$("#movie-area").append(`
-						<div class="`+ category +`">
-							<div class="row">
-								<p><b>`+ title +`</b> `+ year +`|`+ category +`</p>
+						<div class="col s12">
+							<div class="col s9">
+								<p class="name">`+ title +`<span class="year"> ` + year + ` | `+ category +`</span></p>
+								<p class="rojo"><span><i class="icon material-icons">schedule</i></span> `+ duration +` <span><i class="icon material-icons">tv</i></span> `+ director +`</p>
 							</div>
-							<div class="row">
-								<p>+`+ duration +` `+ director +`</p>
+							<div class="col s3">
+								<a id="fav" class="btn btn-small">Add Favorites</a>							
 							</div>
-						</div>						
+						</div>
 
 					`)			
 				});	
@@ -20328,15 +20342,15 @@ $(document).ready(function(){
 					var duration = ele.runtime;
 					var director = ele.director;
 					$("#movie-area").append(`
-						<div class="movie `+ category +`">
-							<div class="row">
-								<p><b>`+ title +`</b> `+ year +`|`+ category +`</p>
+						<div class="col s12">
+							<div class="col s9">
+								<p class="name">`+ title +`<span class="year"> ` + year + ` | `+ category +`</span></p>
+								<p class="rojo"><span><i class="icon material-icons">schedule</i></span> `+ duration +` <span><i class="icon material-icons">tv</i></span> `+ director +`</p>
 							</div>
-							<div class="row">
-								<p>+`+ duration +` `+ director +`</p>
+							<div class="col s3">
+								<a id="fav" class="btn btn-small">Add Favorites</a>						
 							</div>
-						</div>						
-
+						</div>
 					`)
 				});	
 			});

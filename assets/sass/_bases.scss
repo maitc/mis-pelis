@@ -1,6 +1,42 @@
+
 nav{
 	background-color:$nav;
 	.brand-logo{
 		font-size:15px;
 	}
+}
+.boton{
+	background-color:#C14748;
+	border-radius:3%;
+	font-size:10px;
+}
+.btn:hover{
+	background-color:#C14748;
+}
+.year{
+	color:#8E8E92;
+}
+.name{
+	color:black;
+	font-weight: 700;
+}
+.rojo{
+	font-size:13px;
+	color:#C14748;
+}
+.icon{
+	font-size:15px;
+}
+
+#fav{
+	background-color: #C14748;
+    font-size: 8px;
+    line-height: 15px;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+    text-transform: none;
+    width: 104%;
+    height: 22px;
+    margin: 12px -25px 0;
 }
