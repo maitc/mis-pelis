@@ -32,6 +32,54 @@
 	.nav-wrapper{
 		background-color: $colornav;
 	}
+	.errormail{
+		display: none;
+		color: $negro;
+	}
+	.errorpass{
+		display: none;
+		color: $negro;
+	}
+	.centro{
+		padding: 40px;
+		p{
+			color: $negro;
+			padding: 0px;
+		}
+		h6{
+			color: $negro;
+			a{
+				color:$negro;
+			}
+			a:hover{
+				color: darkblue;
+			}
+		}
+		.input{
+			height: 70px;
+			color: $negro;
+			margin-bottom: 30px;
+		}
+		label{
+			color: $colorletra;
+			font-weight: bold;
+			padding-bottom: 5px;
+			height: 30px;
+		}
+		input{
+			background-color: $blanco;
+			height: 30px;
+			border: none;
+			margin: 0;
+		}
+	}
+	#btn-sesion{
+		width: 100%;
+		background-color: $colornav;
+		color: $blanco;
+		margin-top: 50px;
+		text-transform: capitalize;
+	}
 }
 /*FIN LOGIN*/
 /*CUENTA*/
@@ -45,6 +93,7 @@
 		padding: 30px;
 		.input{
 			height: 70px;
+			color: $negro;
 		}
 		label{
 			color: $colorletra;
@@ -62,8 +111,16 @@
 			width: 70%;
 			background-color: $colornav;
 			color: $blanco;
-			margin-top: 20%;
+			margin-top: 50px;
 			text-transform: capitalize;
+		}
+		.vacio{
+			display: none;
+			color: $negro;
+		}
+		.error{
+			display: none;
+			color: $negro;
 		}
 	}
 }

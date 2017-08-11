@@ -8,20 +8,51 @@ $('#cuenta').click(function(){
 /*FIN INDEX*/
 
 /*LOGIN*/
-
+$('#btn-sesion').click(function(){
+	/*PONER VALIDACION DE DATOS*/
+	var vali = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+	var inputmail = $('#mail').val();
+	var clave = $('#pass').val();
+	if (vali.test(inputmail)==false){
+		$('.errormail').show();
+	}else{
+		$('.errormail').hide();
+	}
+	if(clave.length>8 || isNaN(clave)==true || clave==''){
+		$('.errorpass').show();
+	}else{
+		$('.errorpass').hide();
+	}
+	if(vali.test(inputmail)==true && inputmail!=='' && clave.length<8 && isNaN(clave)==false & clave!==''){
+		document.location.href= "movies.html";
+	}
+});
 /*FIN LOGIN*/
 
 /*CUENTA*/
 $('.botoncuenta').click(function(){
-	var nombre = $('#name').val();
-	console.log(nombre);
+	var vali = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+	var inputmail=$('#email').val();
+if($('#name').val()=="" || $('#username').val()=="" || $('#email').val()=="" || $('#country').val()==""){
+	$('.vacio').show();
+}else if(vali.test(inputmail)==false){
+	$('.vacio').hide();
+	$('.error').show();
+}else{
+	$('.error').hide();
+	var nombre = $('#name').val();	
 	localStorage.setItem('name',nombre);
 	var usuario = $('#username').val();
-	console.log(usuario);
 	localStorage.setItem('username',usuario);
-	var correo = $('#mail').val();
-	console.log(correo);
-	localStorage.setItem('mail',correo);
+	var correo = $('#email').val();
+	localStorage.setItem('email',correo);
+	var pais = $('#country').val();
+	localStorage.setItem('country',pais);
 	console.log(localStorage);
+	document.location.href = "movies.html";
+	/*
+	localStorage.getItem('country')
+	*/ //Para llamar los datos desde otro lado, se cambia por name, username, email y country
+}
 })
 /*FIN CUENTA*/
