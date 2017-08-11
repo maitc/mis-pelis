@@ -20257,3 +20257,16 @@ $(document).ready(function(){
 	$(".button-collapse").sideNav();
 	$('select').material_select();
 });
+
+var req = new XMLHttpRequest();
+
+var URL = "https://netflixroulette.net/api/api.php?";
+var queryType = "actor=";
+var query = "benedict cumberbatch";
+
+req.open('GET', URL + queryType + query.replace(/\s/ig, "+"), true);
+req.addEventListener("load", function() {
+	var response = JSON.parse(req.responseText);
+	console.log(response);
+});
+req.send(null);
