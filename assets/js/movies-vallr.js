@@ -22,6 +22,7 @@ $(document).ready(function(){
 						</div>
 						<div class="col s3">
 							<a id="fav" class="btn btn-small">Add Favorites</a>
+							<p id="rating">3/5</p>							
 						</div>
 					</div>
 					`)				
@@ -52,7 +53,8 @@ $(document).ready(function(){
 								<p class="rojo"><span><i class="icon material-icons">schedule</i></span> `+ duration +` <span><i class="icon material-icons">tv</i></span> `+ director +`</p>
 							</div>
 							<div class="col s3">
-								<a id="fav" class="btn btn-small">Add Favorites</a>							
+								<a id="fav" class="btn btn-small">Add Favorites</a>
+								<p id="rating">3/5</p>
 							</div>
 						</div>
 
@@ -87,7 +89,8 @@ $(document).ready(function(){
 								<p class="rojo"><span><i class="icon material-icons">schedule</i></span> `+ duration +` <span><i class="icon material-icons">tv</i></span> `+ director +`</p>
 							</div>
 							<div class="col s3">
-								<a id="fav" class="btn btn-small">Add Favorites</a>						
+								<a id="fav" class="btn btn-small">Add Favorites</a>
+								<p id="rating">3/5</p>												
 							</div>
 						</div>
 					`)
